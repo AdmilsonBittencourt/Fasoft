@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div class="first-img-fasoft">
+        <img src="http://54.236.27.121:3000/_next/static/media/calouros.70cce400.svg" alt="">
+      </div>
+      <div class="right-side-page">
+        <div class="last-img-fasoft">
+          <img src="http://54.236.27.121:3000/_next/static/media/inscricoes.111bca63.svg" alt="">
+        </div>
+        <form action="">
+          
+          <div class="inputs check">
+              <input type="text" id="name" name="name" required >
+              <label for="name">Nome Completo *</label>
+              <div class="box-error">
+                <i class="fa-solid fa-exclamation"></i>
+                <small></small>
+              </div>
+          </div>
+
+            <div class="inputs check">
+              <input type="text" id="email" name="email" required onblur="validForm()">
+              <label for="email">E-mail *</label>
+              <div class="box-error">
+                <i class="fa-solid fa-exclamation"></i>
+                <small></small>
+              </div>
+          </div>
+            
+            <div class="selectMenu check">
+              <div class="select-box" id="selectPeriodo" tabindex="0">
+                <small id="select-Option">Selecione um Período</small>
+                <i class="fa-solid fa-sort-down"></i>
+              </div>
+              <ul class="container-options">
+                  <li id="li-options"><span class="option-text">Selecione um Período</span></li>
+                  <li id="li-options" class=""><span class="option-text">1° Período Turma A</span></li>
+                  <li id="li-options"><span class="option-text">1° Período Turma B</span></li>
+                  <li id="li-options"><span class="option-text">2° Período Turma A</span></li>
+                  <li id="li-options"><span class="option-text">3° Período Turma A</span></li>
+                  <li id="li-options"><span class="option-text">3° Período Turma B</span></li>
+                  <li id="li-options"><span class="option-text">5° Período Turma A</span></li>
+                  <li id="li-options"><span class="option-text">7° Período Turma A</span></li>
+                  <li id="li-options"><span class="option-text">Professor</span></li>  
+                  <li id="li-options"><span class="option-text">Outros</span></li>  
+              </ul>       
+          </div>
+
+
+          <div class="selectMenu-last check">
+            <div class="select-box" id="selectTamanho" tabindex="0">
+              <small id="select-OptionT">Selecione um Tamanho</small>
+              <i class="fa-solid fa-sort-down"></i>
+            </div>
+            
+              <ul class="container-options">
+                <li id="li-optionsT"> <span class="option-text-T">Selecione um Tamanho</span> </li>
+                <li id="li-optionsT"> <span class="option-text-T">Camiseta Normal P</span> </li>
+                <li id="li-optionsT"> <span class="option-text-T">Camiseta Normal M</span> </li>
+                <li id="li-optionsT"> <span class="option-text-T">Camiseta Normal G</span> </li>
+                <li id="li-optionsT"> <span class="option-text-T">Camiseta Normal GG</span> </li>
+                <li id="li-optionsT"> <span class="option-text-T">Camiseta Normal XGG</span> </li>
+              </ul>
+            
+          </div>
+
+          
+          <div class="addPhotos check">
+            <label for="img-picture" class="img-photos" id="label-picture">
+              <input type="file" name="img-picture" id="img-picture">
+              <span class="img-picture">
+                <img class="img-style" name="img-picture" src="http://54.236.27.121:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphoto.491a83d4.jpeg&w=128&q=75" alt="">
+              </span>
+              <label for="img-picture">ADICIONAR FOTO</label>
+            </label>
+
+            <div class="text">
+              <p>
+                Todos os <br> campos são obrigatórios.
+              </p>
+              <p>  
+                Obs.:
+                <br>
+                A imagem será utilizada para reconhecimento Facial, 
+                envie uma foto de rosto
+              </p>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="submit-button invalid">
+          <button type="submit" id="submit-button">ENVIAR INSCRIÇÃO</button>
+        </div>
+
+        <div class="comprovante">
+          <a href="">COMPROVANTE DE PAGAMENTO</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

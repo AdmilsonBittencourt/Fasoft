@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root{
+  --color-grey-10:	#E8E8E8; 
+  --color-grey-lite:	#d8d5d5; 
+  --color-grey-50: rgb(190, 190, 190); 
+  --color-grey-100: rgb(143, 143, 143); 
+  --color-blue-10: #1976D2;
+}
+body{
+  width: 100vw;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  padding-block: 1rem;
+  /* background-image: linear-gradient(to right, rgba(255,0,0,0), #deebf9); */
+  /* padding: 2rem; */
+}
+
+main{
+  display: flex;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.right-side-page{
+  width: 30%;
+  margin-right: 4rem;
+}
+
+.first-img-fasoft{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+.first-img-fasoft img{
+  width: 30rem;
+}
+
+.last-img-fasoft{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.last-img-fasoft img{
+  width: 40%;
+}
+
+.inputs{
+  position: relative;
+  width: 100%;
+}
+
+.inputs input{
+  padding: 16px 14px 12px;
+  width: 100%;
+  height: 100%;
+  border: 1.8px solid var(--color-grey-50);
+  border-radius: 5px;
+  background-color: white;
+  outline: none;
+  font-size: 18px;
+}
+
+.inputs input:hover{
+  border-color: black;
+}
+
+.inputs input:focus{
+  border-color: var(--color-blue-10);
+}
+
+.inputs label{
+  position: absolute;
+  left: 1rem;
+  top: .9rem;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.9px;
+  color: var(--color-grey-100);
+  background-color: white;
+  padding-inline: 1.8px;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.inputs input:focus ~ label{
+  color: var(--color-blue-10);
+  top: -9px;
+  font-size: 15px;
+
+}
+.inputs input:valid ~ label{
+  top: -8px;
+  font-size: 15px;
+}
+
+/*deixa o background do autocomplete transparente*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: black !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+ul li{
+  list-style: none;
+  /* border: 1px solid red; */
+  padding: .5rem 1rem;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+
+ul li:hover{
+  background-color: var(--color-grey-10);
+}
+
+
+ul li i{
+  padding-bottom: 10px;
+}
+
+.select-box{
+  padding: 16px 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--color-grey-50);
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.select-box small{
+  font-size: 18px;
+}
+
+.select-box:hover{
+  border-color: black;
+}
+
+.select-box:focus{
+  border-color: var(--color-blue-10);
+}
+
+
+.selectMenu.active .container-options{
+  display: block;
+}
+
+.selectMenu-last.active .container-options{
+  display: block;
+}
+
+.container-options{
+  display: none;
+  flex-direction: column;
+  padding-block: 10px;
+  border-radius: 7px;
+  box-shadow: 0px 11px 22px 1px rgba(0,0,0,0.65);
+}
+
+.addPhotos{
+  display: flex;
+  width: 100%;
+}
+
+.img-photos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  gap: 10px;
+  padding-block: 10px;
+  transition: .6s;
+  cursor: pointer;
+}
+
+#img-picture {
+  display: none;
+}
+
+.img-photos:hover{
+  background-color: #eff6fb;
+}
+
+.img-photos label{
+  font-weight: 500;
+  color: var(--color-blue-10);
+  cursor: pointer;
+}
+
+.img-picture{
+  width: 160px;
+  height: 160px;
+  border-radius: 9px;
+  box-shadow: 1px 3px 5px 4px rgba(0,0,0,0.27);
+  padding: .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-style{
+  border-radius: 9px;
+  width: 100%;
+  max-height: 100%;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 10px;
+  gap: 15px;
+  padding: 10px;
+}
+
+.text p{
+  font-family: 'Courier Prime', monospace;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.submit-button.invalid button{
+  margin-top: 10px;
+  width: 100%;
+  padding-block: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-grey-50);
+  color: var(--color-grey-100);
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.submit-button.valid button{
+  margin-top: 10px;
+  width: 100%;
+  padding-block: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-blue-10);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.submit-button-valid:hover{
+  background-color: #0966c4;
+}
+
+.comprovante{
+  margin-top: 30px;
+  width: 100%;
+  border: 1px solid var(--color-blue-10);
+  background-color: white;
+  padding-block: 12px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.comprovante a{
+  text-decoration: none;
+  color: var(--color-blue-10);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.comprovante:hover{
+  background-color: #e8f1fa;
+}
+
+.box-error {
+  display: none;
+  margin-top: 5px;
+  gap: 5px;
+  padding-left: 5px;
+  align-items: center;
+  margin-bottom: -10px;
+}
+
+.box-error small, .box-error i{
+  color: red;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.success{
+  
+}
+
+@media screen and (max-width: 476px){
+
+  .container{
+    background-image: none;
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 1.5rem;
+    /* border: 1px solid red; */
+  }
+
+  .first-img-fasoft{
+    width: 100%;
+    height: 322px;
+    margin-block: 50px;
+  }
+
+  .right-side-page{
+    height: auto;
+    width: 100%;
+    padding-inline: auto;
+    /* border: 1px solid red; */
+  }
+
+  .comprovante{
+    margin-bottom: 30px;
+  }
+}

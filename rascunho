@@ -1,0 +1,23 @@
+ let contador = 0;
+    formControl.forEach(formControl => {
+       if(formControl.classList.contains('success')){
+        contador = contador + 1;
+       } 
+       
+    })
+    
+    if(contador == 5){
+        console.log("enviado")
+    } else {
+        console.log("not enviado")
+    }
+
+
+    if(nameValue <= 0){
+        setFatherName.classList.remove('success')
+        console.log("Não deu certo")
+    } else{
+        setFatherName.classList.add('success')
+        console.log("deu certo")
+    }
+    //metodo asincrono
